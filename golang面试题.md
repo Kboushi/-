@@ -61,3 +61,29 @@ func main() {
 ```
 我们定义了一个swap函数，接收两个指针作为参数，并通过指针交换了两个变量的值。在主函数中，我们通过取地址操作符&获取变量的指针，并将指针传递给swap函数。通过使用指针，我们实现了变量值的交换。
 
+# map
+## go语言中map是什么，给出一个使用map的示例
+map是一种无序的键值对集合，也称为字典。map中的键必须是唯一的，而值可以重复。map提供了快速的查找和插入操作，适用于需要根据键快速检索值的场景。
+```golang
+package main
+import "fmt"
+func main() {
+    ages := make(map[string]int) // 姓名：年龄
+    ages["Bob"] = 18
+    ages["Alex"] = 19
+    ages["John"] = 17
+    // 打印每个人的年龄
+    fmt.Println(ages["Bob"], ages["Alex"], ages["John"])
+}
+```
+map是无序的，每次迭代map的顺序可能不同
+
+## map的有序遍历
+如何按特定顺序遍历map
++ 创建一个切片来保存map的键。
++ 遍历map，将键存储到切片中。
++ 对切片进行排序。
++ 根据排序后的键顺序，遍历map并访问对应的值。
+```golang
+
+```
